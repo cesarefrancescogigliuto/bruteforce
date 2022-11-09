@@ -42,3 +42,21 @@ def creaCampione(password, elements):
         out.append(get_random_string(len(password), dictionary))
 
     return out
+
+def decriptapassword(password):
+    iterations = pow(len(dictionary),len(password)) 
+    campione = creaCampione(password, 1000000)
+    checker = get_random_string(len(password), [' '])
+    begin = dt.now()
+    for i in range(0,len(campione)):
+        checker == campione[i]
+    end = dt.now()
+
+    msec = (end-begin).microseconds
+    print ("msec: {}".format(msec))
+    total_time = msec*iterations/1000000
+    return total_time
+
+password = creapassword()
+
+print('\nla tua password generata è: ' + password + '\n')
