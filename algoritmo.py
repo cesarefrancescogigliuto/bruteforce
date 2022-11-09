@@ -60,3 +60,11 @@ def decriptapassword(password):
 password = creapassword()
 
 print('\nla tua password generata è: ' + password + '\n')
+
+
+if password != "" :
+    tot=decriptapassword(password)
+    print("Il tempo di bruteforce per trovare la seguente password e': {} milliseconds".format(tot))
+
+else :
+    print("la password non è stata generata, riprova per una password piu' sicura")
